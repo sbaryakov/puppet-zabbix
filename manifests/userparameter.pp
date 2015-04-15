@@ -30,8 +30,8 @@
 
 class zabbix::userparameter (
   $data = {},
-) {
   $data_additional = hiera_hash('zabbix::userparameter::additional', {})
+) {
   $data_real       = merge($data, $data_additional)
   
   validate_hash($data_real)
